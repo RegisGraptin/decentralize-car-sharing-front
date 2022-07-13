@@ -1,12 +1,20 @@
 <template>
   <main>
-    <h1>Decentralize car sharing</h1>
+    <HeaderSearch></HeaderSearch>
+
+    <div class="container">
+        <h1>Decentralize car sharing</h1>
+    </div>
   </main>
 </template>
 
 <script>
-export default {
+import HeaderSearch from './HeaderSearch.vue'
 
+export default {
+  components: {
+    HeaderSearch
+  }
 }
 </script>
 

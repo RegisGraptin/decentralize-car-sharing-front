@@ -3,8 +3,44 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #eef4fc;
+    min-height: 100vh;
 }
 
 h1 {
     color: red;
+}
+
+
+
+/// Header Search Container
+
+div.large-container {
+    width: 100%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+#header-search-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+
+    background: url("./assets/head.jpg") no-repeat center center;
+    background-size: auto;
+    background-size: cover;
+    position: relative;
+}
+
+
+#header-search-container {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    background-image: linear-gradient(to right bottom, rgba(3, 0, 61, 0.9), rgba(24, 20, 87, 0.8), rgba(49, 36, 113, 0.7), rgba(73, 53, 141, 0.8), rgba(98, 71, 170, 0.9));
 }
