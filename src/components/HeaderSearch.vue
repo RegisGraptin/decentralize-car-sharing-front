@@ -37,11 +37,12 @@
   <!-- Search component -->
   <div id="search-form" class="container">
     
+    <div id="search-form-component">
+
     <input v-model="city" placeholder="Where" />
 
-    <input v-model="starting_date" placeholder="Departure" />
-    <input v-model="ending_date" placeholder="Arrival" />
-
+    <Datepicker class="datepicker" v-model="date" range></Datepicker>
+    
     <select v-model="typeOfVehicle">
       <option value="">Vehicle</option>
       <option>Doesn't matter</option>
@@ -51,19 +52,25 @@
 
     <button v-on:click="search_car">Search</button>
 
+    </div>
+
   </div>
 
 
 </template>
 
 <script>
+
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+
 export default {
+  components: { Datepicker },
   data ()  {
     return {
       city: "",
-      starting_date: "",
-      ending_date: "",
       typeOfVehicle: "",
+      date: null,
     }
   },
   methods: {

@@ -61,6 +61,11 @@ div.large-container {
 
     box-shadow: 0 10px 16px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.05) !important;
     
+
+    #search-form-component {
+        display: flex;
+    }
+
 }
 
 
@@ -91,4 +96,9 @@ div.large-container {
     );
 
     color: white;
+}
+
+
+.datepicker {
+    width: 500px;
 }
