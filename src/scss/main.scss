@@ -1,10 +1,7 @@
-
-
 @font-face {
     font-family: Poppins;
     src: url("~@/assets/Poppins/Poppins-Regular.ttf") format("truetype");
 }
-
 
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -13,7 +10,6 @@
     background-color: #eef4fc;
     min-height: 100vh;
 }
-
 
 /// Header Search Container
 
@@ -25,16 +21,13 @@ div.large-container {
     padding-top: 10px;
     padding-bottom: 0;
 
-
     nav {
         padding-top: 20px;
 
         a {
-            color:#eef4fc;
+            color: #eef4fc;
         }
     }
-
-    
 
     h1 {
         padding-top: 100px;
@@ -42,32 +35,29 @@ div.large-container {
         font-size: 54px;
         font-family: "Poppins";
     }
-
 }
 
-
 #search-form {
-    
     width: 100%;
     height: 80px;
     margin-top: -40px;
 
     position: relative;
     padding-top: 0;
-    margin-bottom: 50px;
-    
+    margin-bottom: 100px;
+
     border-radius: 15px;
     background-color: white;
 
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.05) !important;
-    
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05) !important;
 
     #search-form-component {
         display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
     }
-
 }
-
 
 #header-search-image {
     width: 100%;
@@ -80,25 +70,132 @@ div.large-container {
     position: relative;
 }
 
-
 #header-search-container {
     width: 100%;
     height: 100%;
 
     border-radius: 20px;
     // background-image: linear-gradient(to right bottom, rgba(3, 0, 61, 0.9), rgba(24, 20, 87, 0.8), rgba(49, 36, 113, 0.7), rgba(73, 53, 141, 0.8), rgba(98, 71, 170, 0.9));
-    background-image: linear-gradient(to left top, 
-        rgba(2, 9, 18, 0.6), 
-        rgba(0, 8, 22, 0.6), 
-        rgba(1, 6, 26, 0.6), 
-        rgba(5, 4, 29, 0.6), 
+    background-image: linear-gradient(
+        to left top,
+        rgba(2, 9, 18, 0.6),
+        rgba(0, 8, 22, 0.6),
+        rgba(1, 6, 26, 0.6),
+        rgba(5, 4, 29, 0.6),
         rgba(11, 1, 31, 0.6)
     );
 
     color: white;
 }
 
-
 .datepicker {
     width: 500px;
+}
+
+button.wallet {
+    // $color: #7a86b6;
+    $color: #4b5789;
+
+    min-width: 150px;
+    height: 40px;
+
+    background-color: $color;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #ffffff;
+
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 2000ms;
+    vertical-align: baseline;
+
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all 0.3s;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.logo-functionality {
+    width: 100%;
+    height: 300px;
+    // background-color: red;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+
+    // border-radius: 50% 20% / 10% 40%;
+
+    h3.logo-title {
+        font-family: "Poppins";
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+.round-logo {
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+
+    border-radius: 50px;
+    // box-shadow: 2px #4b5789;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05) !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    color: #4b5789;
+}
+
+.center-logo {
+    margin: auto;
+    margin-top: 20px;
 }
