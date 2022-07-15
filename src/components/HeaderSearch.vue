@@ -19,6 +19,11 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Find your car</a>
                 </li>
+                <li class="nav-item active">
+                  <router-link :to="'/car/'">
+                    <a :href="href" class="nav-link">Add your car</a>
+                  </router-link>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">How it works</a>
                 </li>

@@ -12,6 +12,11 @@ import { faMagnifyingGlass, faHandshake, faCar, faShieldAlt  } from '@fortawesom
 
 library.add(faMagnifyingGlass, faCar, faHandshake, faShieldAlt)
 
+import router from './router';
+
+
+
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(router)
 app.mount('#app');
