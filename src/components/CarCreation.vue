@@ -81,7 +81,9 @@ console.log(contract.methods);
 // console.log("abi")
 // console.log(abi)
 // console.log(contract);
-// const DecentralizeCar = require("../decentralize-car.js");
+// const DecentralizeCar = require("../decentralize-car.ts");
+
+import { DecentralizeCar } from "../decentralize-car.ts";
 
 export default {
     data() {
@@ -137,9 +139,13 @@ export default {
         getCarFromAddress: function () {
             if (this.connected) {
 
-                
+                console.log(DecentralizeCar);
 
-                // DecentralizeCar.getCarFromAddress(this.address);
+
+
+                const decentralizeCar = DecentralizeCar.Instance;
+
+                decentralizeCar.getCarFromAddress(this.address);
 
                 // contract.methods
                 //     .getCarByOwner(this.address)
@@ -159,6 +165,3 @@ export default {
     }
 }
 </script>
-
-<style>
-</style>
