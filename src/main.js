@@ -8,9 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Fontawesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faMagnifyingGlass, faHandshake, faCar, faShieldAlt  } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faHandshake, faCar, faShieldAlt, faHandHoldingDollar  } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faMagnifyingGlass, faCar, faHandshake, faShieldAlt)
+library.add(faMagnifyingGlass, faCar, faHandshake, faShieldAlt, faHandHoldingDollar)
 
 import router from './router';
 

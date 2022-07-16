@@ -14,7 +14,7 @@
           <div class="col-md logo-functionality">
             <div class="round-logo center-logo">
               <!-- <font-awesome-icon icon="fa-solid fa-magnifying-glass" /> -->
-              <font-awesome-icon icon="fa-regular fa-chart-network" />
+              
 
               <font-awesome-icon icon="fa-solid fa-handshake" />
 
