@@ -48,42 +48,9 @@
 // https://www.ludu.co/course/ethereum/running-dapps-locally
 
 
-
-
-const Web3 = require('web3');
-
-
-const provider = new Web3.providers.HttpProvider("http://localhost:8545");
-const web3 = new Web3(provider);
-
-// const { HelloWorld } = output.contracts["HelloWorld.sol"];
-// const { abi } = HelloWorld;
- 
-
-
-import carfactory from "../../../decentralize-car-sharing-front/decentralize-car-sharing/build/contracts/CarHelper.json"
-var abi = carfactory.abi;
-
-let carFactoryContract = "0x992D0C653bF5D1a78cfC81B472CAFf1f3118862E";
-console.log(carFactoryContract);
-
-
-var contract = new web3.eth.Contract(abi, carFactoryContract) //, 0x12345678912345678912345678912345678912);
-
-console.log("Methods")
-console.log(contract.methods);
-
-
-
-// const contract = new web3.eth.Contract(json_path, carFactoryContract);
-// const contract = new web3.eth.Contract(abi);
-
-// console.log("abi")
-// console.log(abi)
-// console.log(contract);
-// const DecentralizeCar = require("../decentralize-car.ts");
-
 import { DecentralizeCar } from "../decentralize-car.ts";
+
+const decentralizeCar = DecentralizeCar.Instance;
 
 export default {
     data() {
@@ -104,11 +71,7 @@ export default {
     methods: {
         add_car: function() {
             if (this.connected) {
-
-                console.log("address user");
-                console.log(this.address);
-                contract.methods
-                    .createCar(
+                decentralizeCar.createCar(
                         this.name, 
                         this.category, 
                         this.typeVehicle, 
@@ -117,13 +80,11 @@ export default {
                         Number(this.mileage), // uint
                         Number(this.year),    // int16
                         Number(this.nb_door), // uint8
-                        Number(this.nb_seat)  // uint8
-                    ).send({from: this.address, gas: 3000000})
-                    .on('receipt', function() {
-                        console.log("on receipt")
-                    })
+                        Number(this.nb_seat),  // uint8
+                        this.address
+                    )
 
-                    // TODO :: Get the emit event : Check if it is possible
+                // TODO :: Get the emit event : Check if it is possible
             }
         }, 
         connect: function () {
@@ -138,28 +99,7 @@ export default {
         },
         getCarFromAddress: function () {
             if (this.connected) {
-
-                console.log(DecentralizeCar);
-
-
-
-                const decentralizeCar = DecentralizeCar.Instance;
-
                 decentralizeCar.getCarFromAddress(this.address);
-
-                // contract.methods
-                //     .getCarByOwner(this.address)
-                //     .call()
-                //     .then(function (carList) {
-                //         console.log(carList);
-
-                //         for (let i = 0; i < carList.length; i++) {
-                //             contract.methods.cars(i).call().then(function (car) {
-                //                 console.log(car);
-                //             });
-                            
-                //         }
-                //     });
             }
         }
     }
