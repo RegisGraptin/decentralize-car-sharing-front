@@ -1,5 +1,5 @@
 
-const carfactory = require("../decentralize-car-sharing/build/contracts/CarHelper.json");
+const carfactory = require("../../decentralize-car-sharing/build/contracts/CarHelper.json");
 const Web3 = require('web3');
 
 const provider = new Web3.providers.HttpProvider("http://localhost:8545");

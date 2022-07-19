@@ -42,13 +42,10 @@
 
 <script>
 
-// https://medium.com/web3labs/web3j-openapi-openapi-generation-straight-from-solidity-smart-contracts-b004ca1fe120
-// https://docs.web3j.io/4.8.7/web3j_openapi/
-
 // https://www.ludu.co/course/ethereum/running-dapps-locally
 
 
-import { DecentralizeCar } from "../decentralize-car.ts";
+import { DecentralizeCar } from "@/api/decentralize-car.ts";
 
 const decentralizeCar = DecentralizeCar.Instance;
 

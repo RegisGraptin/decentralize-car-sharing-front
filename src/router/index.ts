@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "@/components/Home.vue";
-import CarCreation from "@/components/CarCreation.vue";
-import CarView from "@/components/CarView.vue";
+import Home from "@/pages/Home.vue";
+import CarCreation from "@/pages/car/CarCreation.vue";
+import CarView from "@/pages/car/CarView.vue";
 
 const routes = [
   {

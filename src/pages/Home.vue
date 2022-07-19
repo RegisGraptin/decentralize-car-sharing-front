@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import HeaderSearch from './HeaderSearch.vue'
+import HeaderSearch from '@/components/HeaderSearch.vue'
 
 export default {
   components: {

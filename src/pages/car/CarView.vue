@@ -10,7 +10,7 @@
 
 <script>
 
-import { DecentralizeCar } from "../decentralize-car.ts";
+import { DecentralizeCar } from "@/api/decentralize-car.ts";
 
 const decentralizeCar = DecentralizeCar.Instance;
 
