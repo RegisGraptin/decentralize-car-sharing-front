@@ -22,6 +22,7 @@
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.1.2",
+    "vue3-carousel": "^0.1.40",
     "web3": "^1.7.4"
   },
   "devDependencies": {

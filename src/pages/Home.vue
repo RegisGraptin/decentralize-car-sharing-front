@@ -4,6 +4,8 @@
 
     <KeyPoints></KeyPoints>
 
+    <CityShortcut></CityShortcut>
+
     <!-- TODO :: Rapid shortcut of big cities -->
 
     <!-- TODO :: Interesting points : eventually to blog access on what car sharing improve
@@ -17,11 +19,13 @@
 <script>
 import HeaderSearch from '@/components/HeaderSearch.vue'
 import KeyPoints from '@/components/home/KeyPoints.vue'
+import CityShortcut from '@/components/home/CityShortcut.vue'
 
 export default {
   components: {
     HeaderSearch,
-    KeyPoints
+    KeyPoints,
+    CityShortcut
 }
 }
 </script>
